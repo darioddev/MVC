@@ -1,0 +1,29 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+# Regla donde le decimos a Apache que queremos sobre escribir las URLs para crear URLs amigables.
+
+RewriteRule ^$ src/controllers/home.controller.php [L]
+RewriteRule ^Home src/controllers/home.controller.php [L]
+#Paginacion de peliculas que funcione con el controlador peliculas
+RewriteRule ^Peliculas/([0-9]+) src/controllers/peliculas.controller.php?page=$1 [L]
+RewriteRule ^Peliculas src/controllers/peliculas.controller.php [L]
+
+#Paginacion de discos que funcione con el controlador discos
+RewriteRule ^Discos/([0-9]+) src/controllers/discos.controller.php?page=$1 [L]
+RewriteRule ^Discos src/controllers/discos.controller.php [L]
+#Paginacion de libros que funcione con el controlador libros
+RewriteRule ^Libros/([0-9]+) src/controllers/libros.controller.php?page=$1 [L]
+RewriteRule ^Libros src/controllers/libros.controller.php [L]
+
+#Seccion de editar el primer parametro sera la clase y el segundo el id 
+RewriteRule ^Editar/([a-zA-Z]+)/([0-9]+) src/controllers/edit.controller.php?class=$1&id=$2 [L]
+
+#Seccion de añadir se le pasa el parametro de la clase
+RewriteRule ^Anadir/([a-zA-Z]+) src/controllers/add.controller.php?class=$1 [L]
+# Excluir archivos y directorios reales de la reescritura
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirigir cualquier otra solicitud a tu controlador principal o página de error
+RewriteRule ^(.*)$ src/controllers/404.controller.php 

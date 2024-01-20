@@ -1,0 +1,308 @@
+.table-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 10px;
+  color: white;
+}
+
+.table-options-row {
+  display: flex;
+  align-items: center;
+}
+
+.table-options-row span {
+  margin-right: 10px;
+}
+
+.table-options-row input {
+  width: 50px;
+  height: 28px;
+  line-height: 28px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f3f3f4;
+  color: #0d0c22;
+  transition: var(--trans-03);
+}
+
+.table-options-row input::placeholder {
+  color: #9e9ea7;
+}
+
+.table-options-row input:focus,
+.table-options-row input:hover {
+  outline: none;
+  border-color: rgba(234, 76, 137, 0.4);
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(234, 76, 137, 0.1);
+}
+
+.table-options-search {
+  display: flex;
+  align-items: center;
+}
+
+.form button {
+  border: none;
+  background: none;
+  color: #8b8ba7;
+}
+
+.form,
+.table-options-order {
+  --timing: 0.3s;
+  --width-of-input: 200px;
+  --height-of-input: 40px;
+  --border-height: 2px;
+  --input-bg: #fff;
+  --border-color: #2f2ee9;
+  --border-radius: 30px;
+  --after-border-radius: 1px;
+  position: relative;
+  width: var(--width-of-input);
+  height: var(--height-of-input);
+  display: flex;
+  align-items: center;
+  padding-inline: 0.8em;
+  border-radius: var(--border-radius);
+  transition: border-radius 0.5s ease;
+  background-color: #f3f3f4;
+  margin-bottom: 0 !important;
+}
+
+.table-options-order {
+  margin-right: 20px;
+}
+.inputSearch,
+.table-options-order select {
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  padding-inline: 0.5em;
+  padding-block: 0.2em;
+  border: none !important;
+}
+
+.table-options-order select {
+  height: 90%;
+  padding-top: -20px;
+}
+
+.form:before {
+  content: "";
+  position: absolute;
+  background: var(--border-color);
+  transform: scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: var(--border-height);
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+  transition: transform var(--timing) ease;
+}
+
+.form:focus-within {
+  border-radius: var(--after-border-radius);
+}
+
+.inputSearch:focus {
+  outline: none;
+}
+
+.form:focus-within:before {
+  transform: scale(1);
+}
+
+.reset {
+  border: none;
+  background: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.inputSearch:not(:placeholder-shown) ~ .reset {
+  opacity: 1;
+  visibility: visible;
+}
+
+.form svg {
+  width: 17px;
+  margin-top: 3px;
+}
+
+.add {
+  display: flex;
+  align-items: right;
+  border-radius: 8px;
+  place-items: center;
+  margin-right: 20px;
+}
+
+.add-link {
+  background-color: var(--primary-color-light);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.add-link a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.add-link i {
+  min-width: 60px;
+  border-radius: 6px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: var(--text-color);
+  transition: var(--trans-05);
+}
+
+.table-options-search {
+  margin-right: 20px;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table th,
+.table td {
+  border: 1px solid var(--primary-color);
+  color: var(--text-color);
+  padding: 8px;
+  text-align: center;
+}
+
+.table th {
+  background-color: #f2f2f2;
+  color: var(--text-color);
+}
+
+.table-state span {
+  height: 50px;
+  border-radius: 5px;
+  padding: 5px;
+  color: black;
+}
+.table-state span.delete {
+  background-color: red;
+}
+
+.option-table ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.option-table ul li a i {
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+.option-table ul li {
+  margin-right: 20px;
+  display: grid;
+  width: 50px;
+  border-radius: 10px;
+  height: 30px;
+  list-style: none;
+  align-items: center;
+  margin-top: 10px;
+}
+.option-table ul li.option-link.alt {
+  background-color: red;
+}
+
+.option-table ul li.option-link.check {
+  background-color: #2ecc71;
+}
+.option-table ul li.option-link.upload {
+  background-color: var(--primary-color);
+}
+
+.option-table ul li.cog {
+  background-color: var(--primary-color);
+}
+
+/* Estilos para la segunda sección de paginación */
+.pagination.bottom {
+  margin-top: 10px;
+}
+
+/* Estilos para la paginación */
+.pagination {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.pagination ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.pagination li {
+  margin-right: 5px;
+}
+
+.pagination a {
+  display: block;
+  padding: 8px 12px;
+  background-color: var(
+    --primary-color
+  ); /* Cambiado a tu color primario definido en index.css */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.pagination a:hover {
+  background-color: var(
+    --primary-color-light
+  ); /* Cambiado a tu color primario claro definido en index.css */
+}
+
+.inline {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnEliminar {
+  background-color: #ff0000; /* Color de fondo rojo para el botón eliminar */
+  color: #fff; /* Texto blanco para el botón eliminar */
+  border: none; /* Quitamos el borde */
+  padding: 5px 10px; /* Rellenamos el botón */
+  border-radius: 5px; /* Borde redondeado */
+  cursor: pointer; /* Cambiamos el cursor */
+}
+.btnEditar {
+    background-color: #ff7f00; /* Color de fondo naranja para el botón editar */
+    color: #fff; /* Texto blanco para el botón editar */
+    border: none; /* Quitamos el borde */
+    padding: 5px 10px; /* Rellenamos el botón */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer; /* Cambiamos el cursor */
+}
+
+.btnActivar {
+  background-color: #0c530c; /* Color de fondo verde para el botón activar */
+  color: #fff; /* Texto blanco para el botón activar */
+  border: none; /* Quitamos el borde */
+  padding: 5px 10px; /* Rellenamos el botón */
+  border-radius: 5px; /* Borde redondeado */
+  cursor: pointer; /* Cambiamos el cursor */
+}

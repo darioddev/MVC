@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+@import url('./nav.css');
+@import url('./home.css');
+@import url('./table.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poopins' , sans-serif;
+}
+
+:root {
+    --body-color:#9B27B00D;
+    --sidebar-color:#FFFFFF;
+    --primary-color: #207bb5;
+    --primary-color-light: #9B27B00D;
+    --toogle-color:#DDDDDD;
+    --text-color:#707070;
+
+    --trans-03 : all 0.2s ease;
+    --trans-04 : all 0.3s ease;
+    --trans-05 : all 0.4s ease:
+}
+
+body {
+    min-height: 100vh;
+    background: #FFFFFF !important;
+    transition: var(--trans-05);
+    background-color: var(--body-color);
+}
+body.dark {
+    --body-color:#1B191A;
+    --sidebar-color:#242526;
+    --primary-color: #3A3B3C;
+    --toogle-color:#FFFFFF;
+    --text-color:#CCCCCC;
+}
+body.dark .sidebar header .toogle{
+    color: var(--text-color)
+}
+body.dark .mode .sun-moon i.sun {
+    opacity: 1;
+}
+
+body.dark .mode .sun-moon i.moon {
+    opacity: 0;
+}
+body.dark .switch::before {
+    left: 20px;
+}
+body.dark .home .text {
+    color: var(--text-color);
+}
+
+::selection {
+    background-color: var(--primary-color);
+}
+
+.formularioEditAnadir {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    /* Bordeado linea */
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 20px;
+    
+}
+
+.formularioEditAnadir input {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    outline: none;
+}
+
+.formularioEditAnadir label {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color : var(--primary-color);
+}
+.formularioEditAnadir input:focus {
+    border: 1px solid var(--primary-color);
+}
+
+.formularioEditAnadir textarea {
+    width: 300px;
+    height: 100px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    outline: none;
+}
+
+.formularioEditAnadir textarea:focus {
+    border: 1px solid var(--primary-color);
+}
+
+.formularioEditAnadir button {
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    cursor: pointer;
+    outline: none;
+}
+
+.formularioEditAnadir button:hover {
+    background-color: var(--primary-color-light);
+}
+
+.formularioEditAnadir button:active {
+    background-color: var(--primary-color);
+}
+
+
+.btn {
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    cursor: pointer;
+    outline: none;
+    margin: 20px;
+}
+.btn.btn-primary {
+    background-color: var(--primary-color);
+}
+.mostrarParrafo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    /* Bordeado linea */
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 20px;  
+}
+.btnContent {
+    margin-bottom: 15px;
+    margin-right: 20px;
+}
+.btnContent a {
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 5PX;
+}
