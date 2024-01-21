@@ -25,8 +25,8 @@ usort($dataModel['Discos'], 'compareByDate');
 
 <?php 
     // Creo variables para almacenar las rutas de las imagenes mas recientes y el titulo 
-    $libroImg = URL_IMG . 'Libros/' . $dataModel['Libros'][0]['imagen'];
-    $libroTitle = $dataModel['Libros'][0]['titulo'];
+    $libroImg = URL_IMG . 'Libros/' . $dataModel['Libros'][0]['imagen']; 
+    $libroTitle = $dataModel['Libros'][0]['titulo']; 
 
     $peliculaImg = URL_IMG . 'Peliculas/' . $dataModel['Peliculas'][0]['imagen'];
     $peliculaTitle = $dataModel['Peliculas'][0]['titulo'];

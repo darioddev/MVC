@@ -33,6 +33,7 @@
                     <?php echo ucfirst($value) ?>
                 </label>
                 <?php
+            
                 switch ($value) {
                     case 'imagen':
                         ?>

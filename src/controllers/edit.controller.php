@@ -21,7 +21,6 @@ if (!isset($_GET['id']) || !isset($_GET['class'])) {
 if (isset($_POST["editar"])) {
     // Actualizo el objeto con los datos del formulario llamando al metodo update() de la clase DatabaseFunctions
     DatabaseFunctions::update($orm, $object, $_POST, '../../' . URL_IMG);
-    echo $_SERVER['PHP_SELF'];
     $home = '/' . explode("/", $_SERVER["REQUEST_URI"])[1] . '/'; // Obtengo la ruta de la url de la raiz
     // Redirijo a la pagina de home , la s es debido a que en la url de la pagina de home , se añade una s al final de la clase , por ejemplo libros -> libros
     header("Location: " . $home . $_GET['class'] . 's');

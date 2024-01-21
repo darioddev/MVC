@@ -44,11 +44,6 @@ if (isset($_POST["addModel"])) {
 
     // Redirijo a la pagina de la clase 
     $redirect = '/' . explode("/", $_SERVER["REQUEST_URI"])[1] . '/' . $class . 's';
-    ?>
-    <script>
-        alert("Se ha añadido correctamente");
-    </script>
-    <?php
     header("Location: " . $redirect); // Redirijo a la url obtenida por parametro
 }
 ?>

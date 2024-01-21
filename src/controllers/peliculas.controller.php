@@ -30,7 +30,7 @@ $peliculasInactivas = array_filter($peliculas, function ($pelicula) {
 $totalPaginas = ceil(count($peliculas) / ELEMENTOS_POR_PAGINA); // Numero total de las paginas
 $paginaActual = isset($_GET['page']) ? $_GET['page'] : 1; // Obtengo la pagina actual
 
-mostrarElementosPagina($peliculas, $totalPaginas, $paginaActual); // Muestro los elementos de la pagina actual
+mostrarElementosPagina($peliculas, $totalPaginas, $paginaActual); 
 ?>
 
 <?php
